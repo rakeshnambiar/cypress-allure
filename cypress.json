@@ -1,0 +1,16 @@
+{
+"watchForFileChanges": false,
+"chromeWebSecurity": false,
+"viewportWidth": 1024,
+"viewportHeight": 780,
+"env": {
+    "baseUrl": ""
+},
+"reporter": "mochawesome",
+"reporterOptions": {
+    "reportDir": "allure-report/",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
+}

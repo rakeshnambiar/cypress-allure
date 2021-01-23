@@ -1,0 +1,27 @@
+{
+  "name": "Cypress-Suite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open --env --config integrationFolder=cypress/integration/examples,testFiles=**/*.js --browser chrome",
+    "cy:run": "cypress run --config video=false,integrationFolder=cypress/integration/examples --browser chrome",
+    "cy:run:module": "npm run cy:run --reporter mocha-allure-reporter",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "test:allure": "npm run cy:run:module && npm run report:allure"
+  },
+  "keywords": [],
+  "author": "Rakesh Choorikkadu",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^6.2.1"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.13.8",
+    "mocha-allure-reporter": "^1.4.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  }
+}

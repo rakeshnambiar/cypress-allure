@@ -1,0 +1,5 @@
+cypress run --reporter mochawesome
+
+npx mochawesome-merge "cypress/results/*.json" > mochawesome.json
+
+npx merge mochawesome.json
